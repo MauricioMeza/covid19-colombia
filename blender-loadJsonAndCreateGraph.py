@@ -24,8 +24,8 @@ with open('4-formatedSortedWeeks0sFinal.json') as json_file:
         material.keyframe_insert(data_path='diffuse_color')
        
     """--- For every weekly registry of data by municipio ----""" 
-    for day in covi:
-        event = day['mun']
+    for week in covi:
+        event = week['mun']
         
         for mun in event: 
             """Get name of object in 3D scene from municipal code"""
