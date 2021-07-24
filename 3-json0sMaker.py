@@ -13,7 +13,7 @@ with open('3-FormatedSortedWeeks.json') as json_file:
         for munN in data[i].get("mun"):
             """---For all values except first---"""
             if i != 0:
-                """Check data in previous week and find if there is a data for this municipio last week"""
+                """Check data in previous week and find if there are cases for this municipio last week"""
                 checker1 = True
                 for munAn in data[i-1].get("mun"):
                     if munN.get("mun_cod") == munAn.get("mun_cod"):
@@ -27,7 +27,7 @@ with open('3-FormatedSortedWeeks.json') as json_file:
             """---For all values except last---"""
             if i != len(data)-1:
                 checker2 = True
-                """Check data in next week and find if there is a data for this municipio next week"""
+                """Check data in next week and find if there are cases for this municipio next week"""
                 for munDs in data[i+1].get("mun"):
                     if munN.get("mun_cod") == munDs.get("mun_cod"):
                         checker2 = False
